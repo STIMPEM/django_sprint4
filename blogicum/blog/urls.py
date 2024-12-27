@@ -45,31 +45,31 @@ urlpatterns = [
     ),
     # Редактировать пост.
     path(
-        "posts/<int:pk>/edit/",
+        "posts/<int:post.id>/edit/",
         views.PostUpdateView.as_view(),
         name="edit_post",
     ),
     # Удалить пост.
     path(
-        "posts/<int:pk>/delete/",
+        "posts/<int:post.id>/delete/",
         views.PostDeleteView.as_view(),
         name="delete_post",
     ),
     # Добавить комментарий.
     path(
-        "posts/<int:pk>/comment/",
+        "posts/<int:post.id>/comment/",
         views.CommentCreateView.as_view(),
         name="add_comment",
     ),
     # Редактировать комментарий.
     path(
-        "posts/<int:pk>/edit_comment/<int:comment_pk>/",
+        "posts/<int:post.id>/edit_comment/<int:comment_pk>/",
         views.CommentUpdateView.as_view(),
         name="edit_comment",
     ),
     # Удалить комментарий
     path(
-        "posts/<int:pk>/delete_comment/<int:comment_pk>/",
+        "posts/<int:post.id>/delete_comment/<int:comment_pk>/",
         views.CommentDeleteView.as_view(),
         name="delete_comment",
     ),
