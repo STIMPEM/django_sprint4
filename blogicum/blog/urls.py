@@ -27,7 +27,7 @@ urlpatterns = [
     ),
     # Пост.
     path(
-        "posts/<int:pk>/",
+        "posts/<int:post.id>/",
         views.PostDetailView.as_view(),
         name="post_detail",
     ),
